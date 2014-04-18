@@ -94,12 +94,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AutoFareCalculator.PCL\AutoFareCalculator.PCL.csproj">
-      <Project>{5c7d93a1-2e05-43ea-9a55-4ac4ae8ef116}</Project>
-      <Name>AutoFareCalculator.PCL</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
