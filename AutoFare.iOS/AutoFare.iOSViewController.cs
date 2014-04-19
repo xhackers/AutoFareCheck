@@ -2,6 +2,7 @@ using System;
 using System.Drawing;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using Autofare.PCL;
 
 namespace AutoFare.iOS
 {
@@ -24,10 +25,14 @@ namespace AutoFare.iOS
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-			
+            btnCalculateFare.TouchUpInside +=    btnCalculateFare_TouchUpInside;  
 			// Perform any additional setup after loading the view, typically from a nib.
 		}
 
+        void btnCalculateFare_TouchUpInside(object sender, EventArgs e)
+        {
+            lblFare.Text = Fare.CalculateFare(double.Parse(txtDistance.Text));
+        }
 		public override void ViewWillAppear (bool animated)
 		{
 			base.ViewWillAppear (animated);
